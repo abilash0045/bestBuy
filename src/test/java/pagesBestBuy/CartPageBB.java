@@ -8,7 +8,7 @@ import baseBestBuy.BaseClassBB;
 
 public class CartPageBB extends BaseClassBB {
 	
-	@FindBy(xpath="//a[contains(text(),'Logitech')]")
+	@FindBy(xpath="//a[contains(text(),'Logitech - G502 Lightspeed Wireless Optical Gaming Mouse with RGB Lighting - Black')]")
 	WebElement logitechMouseAddedInCart;
 	
 	@FindBy(xpath="//a[contains(text(),'Sony - 75\" Class BRAVIA XR X90K 4K HDR Full Array LED Google TV')]")

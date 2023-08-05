@@ -8,7 +8,7 @@ import baseBestBuy.BaseClassBB;
 
 public class ProductPageBB extends BaseClassBB {
 	
-	@FindBy(xpath="//button[@data-sku-id='6360418' and @data-button-state='ADD_TO_CART']")
+	@FindBy(xpath="//li[contains(., 'Logitech - G502 Lightspeed')]//button[@class='c-button c-button-primary c-button-sm c-button-block c-button-icon c-button-icon-leading add-to-cart-button']")
 	WebElement addToCartLogitechMouse;
 	
 	@FindBy(xpath="//a[text()='Go to Cart']")
@@ -17,8 +17,12 @@ public class ProductPageBB extends BaseClassBB {
 	@FindBy(xpath="//button[text()='Continue shopping']")
 	WebElement continueShoping;
 	
-	@FindBy(xpath="//div[@data-sku-id='6360418']//h4//a")
+//	@FindBy(xpath="//div[@data-sku-id='6360418']//h4//a")
+	@FindBy(xpath="//li[contains(., 'Logitech - G502 Lightspeed')]//button[@class='c-button c-button-primary c-button-sm c-button-block c-button-icon c-button-icon-leading add-to-cart-button']")
 	WebElement logitechMouseAtProductPage;
+	
+	@FindBy(xpath="//a[contains(text(),'Logitech - G502 Lightspeed Wireless Optical Gaming Mouse with RGB Lighting - Black')]")
+	WebElement logitechMouseTextAtProductPage;
 	
 	@FindBy(xpath="//button[@data-sku-id='6499752' and @data-button-state='ADD_TO_CART']")
 	WebElement addToCartTv;
@@ -46,7 +50,7 @@ public class ProductPageBB extends BaseClassBB {
 	}
 	
 	public String addLogitechMouse() throws Exception {
-		String logiTechTitleAtProdPage = extractText(logitechMouseAtProductPage);
+		String logiTechTitleAtProdPage = extractText(logitechMouseTextAtProductPage);
 		clickOn(addToCartLogitechMouse);
 		clickOn(goToCartButton);
 		return logiTechTitleAtProdPage;

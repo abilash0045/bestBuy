@@ -26,7 +26,7 @@ public class CheckOutPageBB extends BaseClassBB {
 	@FindBy(id="user.phone")
 	WebElement mobileNumAtCheckOut;
 	
-	@FindBy(id="text-updates")
+	@FindBy(xpath="//input[@id='text-updates']")
 	WebElement textUpdateCheckBox;
 	
 	@FindBy(xpath="//span[text()='Continue to Payment Information']")

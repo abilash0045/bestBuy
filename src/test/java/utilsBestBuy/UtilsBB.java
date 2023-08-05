@@ -59,7 +59,7 @@ public class UtilsBB {
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless");
+//			options.addArguments("--headless");
 			driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
@@ -89,7 +89,7 @@ public class UtilsBB {
 	}
 
 	public static void waitImplicit() {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
 	}
 
 	public static void getApplication(String url) {
