@@ -14,7 +14,7 @@ TestNG
 log4j
 Extent Reports
 
-### Steps to clone execute the tests
+### Steps to clone and execute the tests
 ```
 git clone https://github.com/BASILAHAMED/BestBuyTest.git
 cd PageObjectModel
