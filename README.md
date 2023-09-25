@@ -16,5 +16,5 @@ Extent Reports
 ```
 git clone https://github.com/BASILAHAMED/BestBuyTest.git
 cd PageObjectModel
-mvn clean test
+mvn clean test 
 ```
