@@ -6,6 +6,9 @@ TestNG is used as a testing framework.
 
 Java Maven Project
 
+## Features
+Performed automation testing using the testng framework in strict adherence to Page Object Model (POM). All test cases and scenarios are documented well in an Excel Spreadsheet. Further HTML reports are generated rendering them an invaluable resource for thorough analysis. Especially added cross-browser testing to simultaneously test with various browsers like chrome, firefox and edge etc.,
+
 ### External Jars used
 Selenium
 TestNG
