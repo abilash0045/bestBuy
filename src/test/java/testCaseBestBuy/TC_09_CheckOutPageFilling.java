@@ -18,7 +18,7 @@ public class TC_09_CheckOutPageFilling extends BaseClassBB {
 		testName = "tc_09_CheckOutPageFilling";
 		testDescription = "Navigating to the checkout page and filling the form with dummy payment information";
 		testCategory = "Regression";
-		testAuthor = "Vinothkumar";
+		testAuthor = "Basil Ahamed";
 	}
 	
 	@Test(priority=10)
