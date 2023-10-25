@@ -15,7 +15,7 @@ public class TC_03_SignInFunctionality extends BaseClassBB {
 		testName = "tc_03_SignInFunctionality";
 		testDescription = "Sign-In Functionality";
 		testCategory = "Regression";
-		testAuthor = "Vinothkumar";
+		testAuthor = "Basil Ahamed";
 		sheetName="signInTestData";
 	}
 	
