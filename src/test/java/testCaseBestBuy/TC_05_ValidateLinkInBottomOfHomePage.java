@@ -14,7 +14,7 @@ public class TC_05_ValidateLinkInBottomOfHomePage extends BaseClassBB {
 		testName = "tc_05_validateLinkInBottomOfHomePage";
 		testDescription = "Link in HomePage bottom is broken or not";
 		testCategory = "Regression";
-		testAuthor = "Vinothkumar";
+		testAuthor = "Basil Ahamed";
 	}
 	
 	@Test(priority=6)
