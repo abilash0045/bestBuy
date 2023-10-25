@@ -13,7 +13,7 @@ public class TC_01_navgatingToBestBestApp extends BaseClassBB {
 		testName = "tc_01_navgatingToBestBestApp";
 		testDescription = "Navigating to the Best Buy e-commerce website";
 		testCategory = "Regression";
-		testAuthor = "Vinothkumar";
+		testAuthor = "Basil Ahamed";
 	}
 	
 	@Test(priority=1)
