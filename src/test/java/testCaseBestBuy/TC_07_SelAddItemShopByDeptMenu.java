@@ -17,7 +17,7 @@ public class TC_07_SelAddItemShopByDeptMenu extends BaseClassBB {
 		testName = "tc_07_selAddItemShopByDeptMenu";
 		testDescription = "Search a Item by Department in Menu and add it in cart";
 		testCategory = "Regression";
-		testAuthor = "Vinothkumar";
+		testAuthor = "Basil Ahamed";
 	}
 
 	@Test(priority=8)
