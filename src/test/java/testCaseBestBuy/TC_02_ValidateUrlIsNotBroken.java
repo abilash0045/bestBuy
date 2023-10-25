@@ -14,7 +14,7 @@ public class TC_02_ValidateUrlIsNotBroken extends BaseClassBB {
 		testName = "tc_02_validateUrlIsNotBroken";
 		testDescription = "Given URL Link is broken or not";
 		testCategory = "Regression";
-		testAuthor = "Vinothkumar";
+		testAuthor = "Basil Ahamed";
 	}
 	
 
