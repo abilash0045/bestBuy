@@ -14,7 +14,7 @@ public class TC_04_CheckTitleOfAllMenu extends BaseClassBB {
 		testName = "tc_04_CheckTitleOfAllMenu";
 		testDescription = "Check the different menu titles";
 		testCategory = "Regression";
-		testAuthor = "Vinothkumar";
+		testAuthor = "Basil Ahamed";
 		sheetName="menuGenricTestData";
 	}
 	
