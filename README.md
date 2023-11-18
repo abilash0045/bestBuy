@@ -16,6 +16,6 @@ Extent Reports
 ### Steps to clone and execute the tests
 ```
 git clone https://github.com/BASILAHAMED/BestBuyTest.git
-cd PageObjectModel
+cd Project
 mvn clean test 
 ```
