@@ -1,7 +1,7 @@
 ## BestBuy Web Application
 
 Best Buy automation testing using Selenium with Java, TestNG and Maven Build.
-This project developed with page object model framework and how it can be integrated with Selenium to automate any application. 
+This project developed with page object model framework and how it can be integrated with Selenium to automate any application.  
 TestNG is used as a testing framework. 
 
 ## Features
