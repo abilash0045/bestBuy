@@ -29,7 +29,6 @@ Follow these steps to clone the repository and execute the tests:
 ```bash
 git clone https://github.com/BASILAHAMED/BestBuyTest.git
 cd Project
-mvn clean test
 ```
 
 ## Contribution Guidelines
