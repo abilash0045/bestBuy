@@ -38,4 +38,4 @@ Contributions to this project are welcome. If you want to contribute, please ref
 This project is licensed under the MIT License. Feel free to use, modify, and distribute the framework following the terms specified in the license.
 
 ## Support
-For any issues, queries, or suggestions related to the BestBuyTest project, please feel free to raise an issue in the repository. Your feedback is valuable, and we are committed to continually improving the framework. Thank you for choosing BestBuyTest Project as reference for your automated testing needs!
+For any issues, queries, or suggestions related to the BestBuyTest project, please feel free to raise an issue in the repository. Your feedback is valuable, and we are committed to continually improving the framework. Thank you for choosing BestBuyTest Project as a reference for your automated testing needs!
