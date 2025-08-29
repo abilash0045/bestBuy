@@ -22,12 +22,13 @@ public class TC_01_navgatingToBestBestApp extends BaseClassBB {
 	public void tc_01_navgatingToBestBestApp() throws Exception {
 		LocationPageBB lp=new LocationPageBB();
 		String actTitle = lp.bestBuyPageTitle();
-		String expTitle="Best Buy International: Select your Country - Best Buy";
+		// After automatic country selection, we should be on the main Best Buy page
+		String expTitle="Best Buy | Official Online Store | Shop Now & Save";
 		softAssert(actTitle, expTitle);
 		if (actTitle.equals(expTitle)) {
 			reportStep("Validating Best Buy Page Title - Pass", "Pass", testName);
 		} else {
-			reportStep("Validating Best Buy Page Title - Fail", "Fail", testName);
+			reportStep("Validating Best Buy Page Title - Fail. Expected: " + expTitle + ", Actual: " + actTitle, "Fail", testName);
 		}
 	}
 }

@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import java.util.List;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -169,15 +170,42 @@ public class BaseClassBB extends UtilsBB {
             System.out.println("Navigation completed");
             
             // Wait for page to load completely
-            try {
-                wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
-                System.out.println("Page loaded successfully");
-            } catch (Exception e) {
-                System.err.println("Page load timeout, but continuing: " + e.getMessage());
-            }
+            		try {
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+			System.out.println("Page loaded successfully");
+			
+			// Handle survey modal if it appears
+			try {
+				WebElement surveyModal = driver.findElement(By.id("survey_window"));
+				if (surveyModal.isDisplayed()) {
+					System.out.println("Survey modal detected, closing it...");
+					// Try to find and click the close button
+					try {
+						WebElement closeButton = driver.findElement(By.cssSelector("#survey_window .close, #survey_window [aria-label='Close'], #survey_window .modal-close"));
+						closeButton.click();
+						System.out.println("Survey modal closed successfully");
+					} catch (Exception closeEx) {
+						// If no close button found, try pressing Escape
+						driver.findElement(By.tagName("body")).sendKeys(org.openqa.selenium.Keys.ESCAPE);
+						System.out.println("Survey modal closed using Escape key");
+					}
+					Thread.sleep(1000); // Wait for modal to close
+				}
+			} catch (Exception surveyEx) {
+				// No survey modal found, continue normally
+				System.out.println("No survey modal detected");
+			}
+			
+		} catch (Exception e) {
+			System.err.println("Page load timeout, but continuing: " + e.getMessage());
+		}
             
             // Add a small wait to ensure page loads
             Thread.sleep(3000);
+            
+            // Handle country selection if needed
+            handleCountrySelection();
+            
             System.out.println("WebDriver initialization completed successfully");
             
         } catch (Exception e) {
@@ -281,6 +309,71 @@ public class BaseClassBB extends UtilsBB {
         } catch (Exception e) {
             System.err.println("Failed to report step: " + e.getMessage());
             throw e;
+        }
+    }
+
+    /**
+     * Handle country selection if the international page appears
+     */
+    private static void handleCountrySelection() {
+        try {
+            // Check if we're on the country selection page
+            String currentTitle = driver.getTitle();
+            if (currentTitle.contains("Select your Country") || currentTitle.contains("International")) {
+                System.out.println("Country selection page detected, selecting United States...");
+                
+                // Try multiple approaches to find and click the United States link
+                boolean countrySelected = false;
+                
+                // Approach 1: Find by link text
+                try {
+                    List<WebElement> usLinks = driver.findElements(By.linkText("United States"));
+                    if (!usLinks.isEmpty()) {
+                        usLinks.get(0).click();
+                        countrySelected = true;
+                        System.out.println("United States selected via link text");
+                    }
+                } catch (Exception e) {
+                    System.out.println("Link text approach failed: " + e.getMessage());
+                }
+                
+                // Approach 2: Find by class name
+                if (!countrySelected) {
+                    try {
+                        List<WebElement> usClassLinks = driver.findElements(By.className("us-link"));
+                        if (!usClassLinks.isEmpty()) {
+                            usClassLinks.get(0).click();
+                            countrySelected = true;
+                            System.out.println("United States selected via class name");
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Class name approach failed: " + e.getMessage());
+                    }
+                }
+                
+                // Approach 3: JavaScript click
+                if (!countrySelected) {
+                    try {
+                        WebElement usLink = driver.findElement(By.linkText("United States"));
+                        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", usLink);
+                        countrySelected = true;
+                        System.out.println("United States selected via JavaScript");
+                    } catch (Exception e) {
+                        System.out.println("JavaScript approach failed: " + e.getMessage());
+                    }
+                }
+                
+                if (countrySelected) {
+                    Thread.sleep(3000); // Wait for navigation
+                    System.out.println("Country selection completed");
+                } else {
+                    System.out.println("Could not select country, continuing anyway");
+                }
+            } else {
+                System.out.println("No country selection needed");
+            }
+        } catch (Exception e) {
+            System.err.println("Error handling country selection: " + e.getMessage());
         }
     }
 

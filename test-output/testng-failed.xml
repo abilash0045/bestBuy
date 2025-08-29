@@ -6,8 +6,8 @@
       <class name="testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu">
         <methods>
           <include name="tearDownSuite"/>
-          <include name="tc_07_selAddItemShopByDeptMenu"/>
           <include name="setUpSuite"/>
+          <include name="tc_07_selAddItemShopByDeptMenu"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="setup"/>
@@ -46,10 +46,11 @@
       <class name="testCaseBestBuy.TC_04_CheckTitleOfAllMenu">
         <methods>
           <include name="tearDownSuite"/>
+          <include name="setupClass"/>
           <include name="setUpSuite"/>
           <include name="setup"/>
           <include name="setUp"/>
-          <include name="tc_04_CheckTitleOfAllMenu"/>
+          <include name="tc_04_CheckTitleOfAllMenu" invocation-numbers="0"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testCaseBestBuy.TC_04_CheckTitleOfAllMenu -->
@@ -68,19 +69,21 @@
           <include name="tearDownSuite"/>
           <include name="setUpSuite"/>
           <include name="setUp"/>
+          <include name="setupClass"/>
           <include name="tearDown"/>
-          <include name="tc_03_SignInFunctionality"/>
+          <include name="tc_03_SignInFunctionality" invocation-numbers="0 1 2 3"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCaseBestBuy.TC_03_SignInFunctionality -->
       <class name="testCaseBestBuy.TC_03_CreatAccountFunctionality">
         <methods>
-          <include name="tc_03_validateCreatAccountFunctionality"/>
+          <include name="tc_03_validateCreatAccountFunctionality" invocation-numbers="10"/>
           <include name="tearDownSuite"/>
           <include name="setup"/>
           <include name="setUpSuite"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setupClass"/>
         </methods>
       </class> <!-- testCaseBestBuy.TC_03_CreatAccountFunctionality -->
     </classes>
