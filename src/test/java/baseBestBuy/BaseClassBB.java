@@ -48,8 +48,10 @@ public class BaseClassBB extends UtilsBB {
      */
     @BeforeMethod
     public void setUp() {
-        // Initialize WebDriver for each test
-        initialization();
+        // Initialize WebDriver only if not already initialized
+        if (driver == null) {
+            initialization();
+        }
         // Initialize SoftAssert for each test
         softAssert = new SoftAssert();
         // Create test in ExtentReports only if testName is set
@@ -65,15 +67,27 @@ public class BaseClassBB extends UtilsBB {
      */
     @AfterMethod
     public void tearDown() {
-        // Assert all soft assertions
-        if (softAssert != null) {
-            softAssert.assertAll();
+        try {
+            // Assert all soft assertions
+            if (softAssert != null) {
+                softAssert.assertAll();
+            }
+        } catch (Exception e) {
+            System.err.println("Error in soft assertions: " + e.getMessage());
         }
+        
         // Quit WebDriver after each test
         if (driver != null) {
-            driver.quit();
-            driver = null;
-            UtilsBB.driver = null; // Also clear the UtilsBB static driver
+            try {
+                System.out.println("Closing WebDriver...");
+                driver.quit();
+                System.out.println("WebDriver closed successfully");
+            } catch (Exception e) {
+                System.err.println("Error closing WebDriver: " + e.getMessage());
+            } finally {
+                driver = null;
+                UtilsBB.driver = null; // Also clear the UtilsBB static driver
+            }
         }
     }
 
@@ -86,6 +100,22 @@ public class BaseClassBB extends UtilsBB {
         if (extent != null) {
             extent.flush();
         }
+        
+        // Force cleanup any remaining WebDriver instances
+        if (driver != null) {
+            try {
+                System.out.println("Force closing WebDriver in tearDownSuite...");
+                driver.quit();
+            } catch (Exception e) {
+                System.err.println("Error force closing WebDriver: " + e.getMessage());
+            }
+        }
+        
+        // Clear static driver references
+        driver = null;
+        UtilsBB.driver = null;
+        
+        System.out.println("Suite teardown completed");
     }
 
     /**
@@ -104,6 +134,17 @@ public class BaseClassBB extends UtilsBB {
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--remote-allow-origins=*");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--disable-extensions");
+            options.addArguments("--disable-notifications");
+            
+            // Check if running in Jenkins or CI environment
+            String jenkinsUrl = System.getenv("JENKINS_URL");
+            String ci = System.getenv("CI");
+            if (jenkinsUrl != null || "true".equals(ci)) {
+                System.out.println("Running in CI environment - enabling headless mode");
+                options.addArguments("--headless");
+            }
             
             System.out.println("Creating ChromeDriver instance...");
             driver = new ChromeDriver(options);

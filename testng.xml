@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Automation Suite">
-  <test thread-count="5" name="BestBuyTest">
+<suite name="Automation Suite" parallel="false" thread-count="1">
+  <test name="BestBuyTest" preserve-order="true">
     <classes>
-      <class name="testCaseBestBuy.TC_09_CheckOutPageFilling"/>
-      <class name="testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage"/>
+      <class name="testCaseBestBuy.TC_01_navgatingToBestBestApp"/>
       <class name="testCaseBestBuy.TC_02_ValidateUrlIsNotBroken"/>
-      <class name="testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu"/>
-      <class name="testCaseBestBuy.TC_06_SearchAddItemInCart"/>
-      <class name="testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu"/>
       <class name="testCaseBestBuy.TC_03_CreatAccountFunctionality"/>
       <class name="testCaseBestBuy.TC_03_SignInFunctionality"/>
-      <class name="testCaseBestBuy.TC_01_navgatingToBestBestApp"/>
       <class name="testCaseBestBuy.TC_04_CheckTitleOfAllMenu"/>
+      <class name="testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage"/>
+      <class name="testCaseBestBuy.TC_06_SearchAddItemInCart"/>
+      <class name="testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu"/>
+      <class name="testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu"/>
+      <class name="testCaseBestBuy.TC_09_CheckOutPageFilling"/>
     </classes>
   </test> <!-- BestBuyTest -->
 </suite> <!-- Automation Suite -->
