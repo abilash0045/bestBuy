@@ -2,6 +2,7 @@ package testCaseBestBuy;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 
 import baseBestBuy.BaseClassBB;
 import pagesBestBuy.CreatAccountPageBB;
@@ -10,13 +11,17 @@ import pagesBestBuy.LocationPageBB;
 
 public class TC_03_CreatAccountFunctionality extends BaseClassBB {
 	
+	@BeforeClass
+	public void setupClass() {
+		sheetName="loginTestData";
+	}
+	
 	@BeforeMethod
 	public void setup() {
 		testName = "tc_03_validateCreatAccountFunctionality";
 		testDescription = "CreatAccount Functionality";
 		testCategory = "Regression";
 		testAuthor = "Basil Ahamed";
-		sheetName="loginTestData";
 		// Call parent setUp method to initialize WebDriver
 		super.setUp();
 	}

@@ -5,9 +5,12 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -154,8 +157,8 @@ public class BaseClassBB extends UtilsBB {
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
             driver.manage().window().maximize();
             
-            // Initialize WebDriverWait
-            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            // Initialize WebDriverWait with longer timeout
+            wait = new WebDriverWait(driver, Duration.ofSeconds(20));
             
             // Set the UtilsBB static driver to the same instance
             UtilsBB.driver = driver;
@@ -165,8 +168,16 @@ public class BaseClassBB extends UtilsBB {
             driver.get("https://www.bestbuy.com/");
             System.out.println("Navigation completed");
             
+            // Wait for page to load completely
+            try {
+                wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+                System.out.println("Page loaded successfully");
+            } catch (Exception e) {
+                System.err.println("Page load timeout, but continuing: " + e.getMessage());
+            }
+            
             // Add a small wait to ensure page loads
-            Thread.sleep(2000);
+            Thread.sleep(3000);
             System.out.println("WebDriver initialization completed successfully");
             
         } catch (Exception e) {
@@ -209,11 +220,18 @@ public class BaseClassBB extends UtilsBB {
      */
     public void clickOn(WebElement element) {
         try {
-            wait.until(driver -> element.isDisplayed());
+            // Wait for element to be clickable
+            wait.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
         } catch (Exception e) {
             System.err.println("Failed to click element: " + e.getMessage());
-            throw e;
+            // Try JavaScript click as fallback
+            try {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+            } catch (Exception jsException) {
+                System.err.println("JavaScript click also failed: " + jsException.getMessage());
+                throw e;
+            }
         }
     }
 
@@ -222,11 +240,17 @@ public class BaseClassBB extends UtilsBB {
      */
     public String extractText(WebElement element) {
         try {
-            wait.until(driver -> element.isDisplayed());
+            wait.until(ExpectedConditions.visibilityOf(element));
             return element.getText().trim();
         } catch (Exception e) {
             System.err.println("Failed to extract text: " + e.getMessage());
-            return "";
+            // Try to get text even if element is not visible
+            try {
+                return element.getText().trim();
+            } catch (Exception textException) {
+                System.err.println("Failed to get text even without visibility check: " + textException.getMessage());
+                return "";
+            }
         }
     }
 

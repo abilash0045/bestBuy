@@ -1,87 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="0" failed="10" skipped="0">
+<testng-results ignored="0" total="10" passed="2" failed="8" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-29T09:36:00 IST" name="Automation Suite" finished-at="2025-08-29T09:37:51 IST" duration-ms="110678">
+  <suite started-at="2025-08-29T11:30:12 IST" name="Automation Suite" finished-at="2025-08-29T11:35:15 IST" duration-ms="302592">
     <groups>
     </groups>
-    <test started-at="2025-08-29T09:36:00 IST" name="BestBuyTest" finished-at="2025-08-29T09:37:51 IST" duration-ms="110678">
-      <class name="testCaseBestBuy.TC_01_navgatingToBestBestApp">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@ea6147e]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@ea6147e]" started-at="2025-08-29T09:37:45 IST" name="setUp" finished-at="2025-08-29T09:37:50 IST" duration-ms="5340" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="tc_01_navgatingToBestBestApp()[pri:1, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@ea6147e]" started-at="2025-08-29T09:37:50 IST" name="tc_01_navgatingToBestBestApp" finished-at="2025-08-29T09:37:50 IST" duration-ms="1" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.getTitle()" because "utilsBestBuy.UtilsBB.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.getTitle()" because "utilsBestBuy.UtilsBB.driver" is null
-at utilsBestBuy.UtilsBB.getPageTitle(UtilsBB.java:111)
-at pagesBestBuy.LocationPageBB.bestBuyPageTitle(LocationPageBB.java:30)
-at testCaseBestBuy.TC_01_navgatingToBestBestApp.tc_01_navgatingToBestBestApp(TC_01_navgatingToBestBestApp.java:22)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc_01_navgatingToBestBestApp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@ea6147e]" started-at="2025-08-29T09:37:50 IST" name="tearDown" finished-at="2025-08-29T09:37:51 IST" duration-ms="80" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCaseBestBuy.TC_01_navgatingToBestBestApp -->
+    <test started-at="2025-08-29T11:30:12 IST" name="BestBuyTest" finished-at="2025-08-29T11:35:15 IST" duration-ms="302592">
       <class name="testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu@3059cbc]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu@3059cbc]" started-at="2025-08-29T09:36:46 IST" name="setUp" finished-at="2025-08-29T09:36:51 IST" duration-ms="5049" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu@78123e82]" started-at="2025-08-29T11:32:26 IST" name="setUp" finished-at="2025-08-29T11:32:30 IST" duration-ms="4807" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="tc_07_selAddItemShopByDeptMenu()[pri:8, instance:testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu@3059cbc]" started-at="2025-08-29T09:36:51 IST" name="tc_07_selAddItemShopByDeptMenu" finished-at="2025-08-29T09:37:07 IST" duration-ms="15401" status="FAIL">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu@78123e82]" started-at="2025-08-29T11:32:30 IST" name="setup" finished-at="2025-08-29T11:32:30 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_07_selAddItemShopByDeptMenu()[pri:8, instance:testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu@78123e82]" started-at="2025-08-29T11:32:30 IST" name="tc_07_selAddItemShopByDeptMenu" finished-at="2025-08-29T11:33:20 IST" duration-ms="49339" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for baseBestBuy.BaseClassBB$$Lambda/0x0000009001392fc8@2b1cd7bc (tried for 10 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b1ef623377fbc28837f6eda465c45b4f, clickElement {id=f.945D95B1352D0BB2C9514572C9868A30.d.8916144BBE70D67D71891D3DBADB07BA.e.3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59686}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59686/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (b1ef623377fbc28837f6eda465c45b4f)] -> class name: us-link]
+Session ID: b1ef623377fbc28837f6eda465c45b4f]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for baseBestBuy.BaseClassBB$$Lambda/0x0000009001392fc8@2b1cd7bc (tried for 10 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-at baseBestBuy.BaseClassBB.clickOn(BaseClassBB.java:166)
-at pagesBestBuy.HomePageBB.selectTvMenuInHomePage(HomePageBB.java:125)
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b1ef623377fbc28837f6eda465c45b4f, clickElement {id=f.945D95B1352D0BB2C9514572C9868A30.d.8916144BBE70D67D71891D3DBADB07BA.e.3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59686}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59686/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (b1ef623377fbc28837f6eda465c45b4f)] -> class name: us-link]
+Session ID: b1ef623377fbc28837f6eda465c45b4f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at baseBestBuy.BaseClassBB.clickOn(BaseClassBB.java:225)
+at pagesBestBuy.LocationPageBB.deliveryAtUSA(LocationPageBB.java:23)
 at testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu.tc_07_selAddItemShopByDeptMenu(TC_07_SelAddItemShopByDeptMenu.java:28)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -109,58 +83,51 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@data-lid='ubr_tv']"}
-  (Session info: chrome=139.0.7258.155)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5dfd8a4a45312311408afe654fa71b91, findElement {using=xpath, value=//button[@data-lid='ubr_tv']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51512}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51512/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5dfd8a4a45312311408afe654fa71b91
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy20.isDisplayed(Unknown Source)
-at baseBestBuy.BaseClassBB.lambda$0(BaseClassBB.java:166)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
-... 29 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc_07_selAddItemShopByDeptMenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu@3059cbc]" started-at="2025-08-29T09:37:07 IST" name="tearDown" finished-at="2025-08-29T09:37:07 IST" duration-ms="123" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu@78123e82]" started-at="2025-08-29T11:33:20 IST" name="tearDown" finished-at="2025-08-29T11:33:20 IST" duration-ms="117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCaseBestBuy.TC_07_SelAddItemShopByDeptMenu -->
-      <class name="testCaseBestBuy.TC_03_SignInFunctionality">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_03_SignInFunctionality@3fb1549b]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="0" status="PASS">
+      <class name="testCaseBestBuy.TC_01_navgatingToBestBestApp">
+        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@793be5ca]" started-at="2025-08-29T11:30:12 IST" name="setUpSuite" finished-at="2025-08-29T11:30:12 IST" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpSuite -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@793be5ca]" started-at="2025-08-29T11:30:12 IST" name="setUp" finished-at="2025-08-29T11:30:19 IST" duration-ms="7011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@793be5ca]" started-at="2025-08-29T11:30:19 IST" name="setup" finished-at="2025-08-29T11:30:19 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="tc_03_SignInFunctionality(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testCaseBestBuy.TC_03_SignInFunctionality@3fb1549b]" started-at="2025-08-29T09:37:45 IST" name="tc_03_SignInFunctionality" data-provider="getFromExcel" finished-at="2025-08-29T09:37:45 IST" duration-ms="0" status="FAIL">
+        <test-method signature="tc_01_navgatingToBestBestApp()[pri:1, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@793be5ca]" started-at="2025-08-29T11:30:19 IST" name="tc_01_navgatingToBestBestApp" finished-at="2025-08-29T11:30:25 IST" duration-ms="5668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_01_navgatingToBestBestApp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@793be5ca]" started-at="2025-08-29T11:30:25 IST" name="tearDown" finished-at="2025-08-29T11:30:25 IST" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:testCaseBestBuy.TC_01_navgatingToBestBestApp@793be5ca]" started-at="2025-08-29T11:35:15 IST" name="tearDownSuite" finished-at="2025-08-29T11:35:15 IST" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- testCaseBestBuy.TC_01_navgatingToBestBestApp -->
+      <class name="testCaseBestBuy.TC_03_SignInFunctionality">
+        <test-method signature="tc_03_SignInFunctionality(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:testCaseBestBuy.TC_03_SignInFunctionality@581ac8a8]" started-at="2025-08-29T11:30:53 IST" name="tc_03_SignInFunctionality" data-provider="getFromExcel" finished-at="2025-08-29T11:30:53 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream$Builder org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream.builder()']]>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "name" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NoSuchMethodError: 'org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream$Builder org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream.builder()'
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "name" is null
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
 at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
@@ -187,18 +154,10 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.NoSuchMethodError: 'org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream$Builder org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream.builder()'
-at org.apache.poi.util.IOUtils.peekFirstNBytes(IOUtils.java:144)
-at org.apache.poi.poifs.filesystem.FileMagic.valueOf(FileMagic.java:209)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.verifyZipHeader(ZipHelper.java:144)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:188)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:156)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
-at utilsBestBuy.UtilsBB.dataReader(UtilsBB.java:131)
-at baseBestBuy.BaseClassBB.getFromExcel(BaseClassBB.java:222)
+Caused by: java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "name" is null
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(XSSFWorkbook.java:1199)
+at utilsBestBuy.UtilsBB.dataReader(UtilsBB.java:147)
+at baseBestBuy.BaseClassBB.getFromExcel(BaseClassBB.java:292)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -213,17 +172,13 @@ at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedExce
         </test-method> <!-- tc_03_SignInFunctionality -->
       </class> <!-- testCaseBestBuy.TC_03_SignInFunctionality -->
       <class name="testCaseBestBuy.TC_03_CreatAccountFunctionality">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_03_CreatAccountFunctionality@10feca44]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="tc_03_validateCreatAccountFunctionality(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCaseBestBuy.TC_03_CreatAccountFunctionality@10feca44]" started-at="2025-08-29T09:37:45 IST" name="tc_03_validateCreatAccountFunctionality" data-provider="getFromExcel" finished-at="2025-08-29T09:37:45 IST" duration-ms="0" status="FAIL">
+        <test-method signature="tc_03_validateCreatAccountFunctionality(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:testCaseBestBuy.TC_03_CreatAccountFunctionality@32b260fa]" started-at="2025-08-29T11:30:53 IST" name="tc_03_validateCreatAccountFunctionality" data-provider="getFromExcel" finished-at="2025-08-29T11:30:53 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream$Builder org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream.builder()']]>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "name" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NoSuchMethodError: 'org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream$Builder org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream.builder()'
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "name" is null
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
 at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
@@ -250,18 +205,10 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.NoSuchMethodError: 'org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream$Builder org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream.builder()'
-at org.apache.poi.util.IOUtils.peekFirstNBytes(IOUtils.java:144)
-at org.apache.poi.poifs.filesystem.FileMagic.valueOf(FileMagic.java:209)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.verifyZipHeader(ZipHelper.java:144)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:188)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:156)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
-at utilsBestBuy.UtilsBB.dataReader(UtilsBB.java:131)
-at baseBestBuy.BaseClassBB.getFromExcel(BaseClassBB.java:222)
+Caused by: java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "name" is null
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(XSSFWorkbook.java:1199)
+at utilsBestBuy.UtilsBB.dataReader(UtilsBB.java:147)
+at baseBestBuy.BaseClassBB.getFromExcel(BaseClassBB.java:292)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -276,85 +223,74 @@ at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedExce
         </test-method> <!-- tc_03_validateCreatAccountFunctionality -->
       </class> <!-- testCaseBestBuy.TC_03_CreatAccountFunctionality -->
       <class name="testCaseBestBuy.TC_02_ValidateUrlIsNotBroken">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_02_ValidateUrlIsNotBroken@6babf3bf]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_02_ValidateUrlIsNotBroken@6babf3bf]" started-at="2025-08-29T09:36:29 IST" name="setUp" finished-at="2025-08-29T09:36:34 IST" duration-ms="4778" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_02_ValidateUrlIsNotBroken@1b1426f4]" started-at="2025-08-29T11:30:25 IST" name="setUp" finished-at="2025-08-29T11:30:29 IST" duration-ms="4372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="tc_02_validateUrlIsNotBroken()[pri:2, instance:testCaseBestBuy.TC_02_ValidateUrlIsNotBroken@6babf3bf]" started-at="2025-08-29T09:36:34 IST" name="tc_02_validateUrlIsNotBroken" finished-at="2025-08-29T09:36:46 IST" duration-ms="12604" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "utilsBestBuy.UtilsBB.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "utilsBestBuy.UtilsBB.driver" is null
-at utilsBestBuy.UtilsBB.screenShot(UtilsBB.java:171)
-at baseBestBuy.BaseClassBB.reportStep(BaseClassBB.java:201)
-at testCaseBestBuy.TC_02_ValidateUrlIsNotBroken.tc_02_validateUrlIsNotBroken(TC_02_ValidateUrlIsNotBroken.java:25)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_02_ValidateUrlIsNotBroken@1b1426f4]" started-at="2025-08-29T11:30:29 IST" name="setup" finished-at="2025-08-29T11:30:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_02_validateUrlIsNotBroken()[pri:2, instance:testCaseBestBuy.TC_02_ValidateUrlIsNotBroken@1b1426f4]" started-at="2025-08-29T11:30:29 IST" name="tc_02_validateUrlIsNotBroken" finished-at="2025-08-29T11:30:53 IST" duration-ms="23766" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc_02_validateUrlIsNotBroken -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_02_ValidateUrlIsNotBroken@6babf3bf]" started-at="2025-08-29T09:36:46 IST" name="tearDown" finished-at="2025-08-29T09:36:46 IST" duration-ms="96" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_02_ValidateUrlIsNotBroken@1b1426f4]" started-at="2025-08-29T11:30:53 IST" name="tearDown" finished-at="2025-08-29T11:30:53 IST" duration-ms="93" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCaseBestBuy.TC_02_ValidateUrlIsNotBroken -->
       <class name="testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu@24fcf36f]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu@24fcf36f]" started-at="2025-08-29T09:37:17 IST" name="setUp" finished-at="2025-08-29T09:37:22 IST" duration-ms="5855" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu@67c33749]" started-at="2025-08-29T11:33:20 IST" name="setUp" finished-at="2025-08-29T11:33:25 IST" duration-ms="4725" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="tc_08_selAddItemShopByBrandMenu()[pri:9, instance:testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu@24fcf36f]" started-at="2025-08-29T09:37:22 IST" name="tc_08_selAddItemShopByBrandMenu" finished-at="2025-08-29T09:37:45 IST" duration-ms="22511" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu@67c33749]" started-at="2025-08-29T11:33:25 IST" name="setup" finished-at="2025-08-29T11:33:25 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_08_selAddItemShopByBrandMenu()[pri:9, instance:testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu@67c33749]" started-at="2025-08-29T11:33:25 IST" name="tc_08_selAddItemShopByBrandMenu" finished-at="2025-08-29T11:34:06 IST" duration-ms="41554" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Input must be set]]>
+              <![CDATA[timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b4d886806fd088d9e2da9c07dd081fed, clickElement {id=f.DBE474B63F0F889899E275103A4658A2.d.44153320BFD8CCC31442D71FAA586226.e.10}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59761}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59761/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (b4d886806fd088d9e2da9c07dd081fed)] -> class name: us-link]
+Session ID: b4d886806fd088d9e2da9c07dd081fed]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Input must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:93)
-at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:74)
-at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:43)
-at utilsBestBuy.UtilsBB.waitExplicit(UtilsBB.java:82)
-at utilsBestBuy.UtilsBB.jsClickOn(UtilsBB.java:163)
-at pagesBestBuy.ProductPageBB.addLenovoThinkPadInProdPage(ProductPageBB.java:78)
-at testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu.tc_08_selAddItemShopByBrandMenu(TC_08_SelAddItemShopByBrandMenu.java:30)
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b4d886806fd088d9e2da9c07dd081fed, clickElement {id=f.DBE474B63F0F889899E275103A4658A2.d.44153320BFD8CCC31442D71FAA586226.e.10}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59761}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59761/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (b4d886806fd088d9e2da9c07dd081fed)] -> class name: us-link]
+Session ID: b4d886806fd088d9e2da9c07dd081fed
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at baseBestBuy.BaseClassBB.clickOn(BaseClassBB.java:225)
+at pagesBestBuy.LocationPageBB.deliveryAtUSA(LocationPageBB.java:23)
+at testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu.tc_08_selAddItemShopByBrandMenu(TC_08_SelAddItemShopByBrandMenu.java:28)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -383,38 +319,65 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc_08_selAddItemShopByBrandMenu -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu@24fcf36f]" started-at="2025-08-29T09:37:45 IST" name="tearDown" finished-at="2025-08-29T09:37:45 IST" duration-ms="143" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu@67c33749]" started-at="2025-08-29T11:34:06 IST" name="tearDown" finished-at="2025-08-29T11:34:06 IST" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCaseBestBuy.TC_08_SelAddItemShopByBrandMenu -->
       <class name="testCaseBestBuy.TC_06_SearchAddItemInCart">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_06_SearchAddItemInCart@7ea9e1e2]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_06_SearchAddItemInCart@7ea9e1e2]" started-at="2025-08-29T09:37:07 IST" name="setUp" finished-at="2025-08-29T09:37:12 IST" duration-ms="5206" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_06_SearchAddItemInCart@76c3e77a]" started-at="2025-08-29T11:31:39 IST" name="setUp" finished-at="2025-08-29T11:31:44 IST" duration-ms="4706" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="tc_06_SearchAddItemInCart()[pri:7, instance:testCaseBestBuy.TC_06_SearchAddItemInCart@7ea9e1e2]" started-at="2025-08-29T09:37:12 IST" name="tc_06_SearchAddItemInCart" finished-at="2025-08-29T09:37:16 IST" duration-ms="4253" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_06_SearchAddItemInCart@76c3e77a]" started-at="2025-08-29T11:31:44 IST" name="setup" finished-at="2025-08-29T11:31:44 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_06_SearchAddItemInCart()[pri:7, instance:testCaseBestBuy.TC_06_SearchAddItemInCart@76c3e77a]" started-at="2025-08-29T11:31:44 IST" name="tc_06_SearchAddItemInCart" finished-at="2025-08-29T11:32:25 IST" duration-ms="41748" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Input must be set]]>
+              <![CDATA[timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [724a099a88164f6fab0129acf6c56754, clickElement {id=f.B841AC19960CB1EFF4FAED93D4BA73E6.d.834C66D12CAE835AB47D271F13C1FF28.e.16}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59626}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59626/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (724a099a88164f6fab0129acf6c56754)] -> class name: us-link]
+Session ID: 724a099a88164f6fab0129acf6c56754]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Input must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:93)
-at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:74)
-at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:43)
-at utilsBestBuy.UtilsBB.waitExplicit(UtilsBB.java:82)
-at utilsBestBuy.UtilsBB.type(UtilsBB.java:100)
-at pagesBestBuy.HomePageBB.searchProduct(HomePageBB.java:119)
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [724a099a88164f6fab0129acf6c56754, clickElement {id=f.B841AC19960CB1EFF4FAED93D4BA73E6.d.834C66D12CAE835AB47D271F13C1FF28.e.16}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59626}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59626/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (724a099a88164f6fab0129acf6c56754)] -> class name: us-link]
+Session ID: 724a099a88164f6fab0129acf6c56754
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at baseBestBuy.BaseClassBB.clickOn(BaseClassBB.java:225)
+at pagesBestBuy.LocationPageBB.deliveryAtUSA(LocationPageBB.java:23)
 at testCaseBestBuy.TC_06_SearchAddItemInCart.tc_06_SearchAddItemInCart(TC_06_SearchAddItemInCart.java:28)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -444,43 +407,37 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc_06_SearchAddItemInCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_06_SearchAddItemInCart@7ea9e1e2]" started-at="2025-08-29T09:37:16 IST" name="tearDown" finished-at="2025-08-29T09:37:17 IST" duration-ms="106" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_06_SearchAddItemInCart@76c3e77a]" started-at="2025-08-29T11:32:25 IST" name="tearDown" finished-at="2025-08-29T11:32:26 IST" duration-ms="117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCaseBestBuy.TC_06_SearchAddItemInCart -->
       <class name="testCaseBestBuy.TC_09_CheckOutPageFilling">
-        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@2df9b86]" started-at="2025-08-29T09:36:00 IST" name="setUpSuite" finished-at="2025-08-29T09:36:00 IST" duration-ms="64" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpSuite -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@2df9b86]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@2df9b86]" started-at="2025-08-29T09:36:00 IST" name="setUp" finished-at="2025-08-29T09:36:05 IST" duration-ms="5113" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@fba92d3]" started-at="2025-08-29T11:34:06 IST" name="setUp" finished-at="2025-08-29T11:34:11 IST" duration-ms="5233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="tc_09_CheckOutPageFilling()[pri:10, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@2df9b86]" started-at="2025-08-29T09:36:05 IST" name="tc_09_CheckOutPageFilling" finished-at="2025-08-29T09:36:10 IST" duration-ms="4610" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@fba92d3]" started-at="2025-08-29T11:34:11 IST" name="setup" finished-at="2025-08-29T11:34:11 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_09_CheckOutPageFilling()[pri:10, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@fba92d3]" started-at="2025-08-29T11:34:11 IST" name="tc_09_CheckOutPageFilling" finished-at="2025-08-29T11:35:15 IST" duration-ms="63223" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Input must be set]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: gh-search-input' (tried for 20 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Input must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:93)
-at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:74)
-at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:43)
-at utilsBestBuy.UtilsBB.waitExplicit(UtilsBB.java:82)
-at utilsBestBuy.UtilsBB.type(UtilsBB.java:100)
-at pagesBestBuy.HomePageBB.searchProduct(HomePageBB.java:119)
-at testCaseBestBuy.TC_09_CheckOutPageFilling.tc_09_CheckOutPageFilling(TC_09_CheckOutPageFilling.java:29)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: gh-search-input' (tried for 20 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at utilsBestBuy.UtilsBB.waitExplicit(UtilsBB.java:86)
+at utilsBestBuy.UtilsBB.type(UtilsBB.java:112)
+at pagesBestBuy.HomePageBB.searchProduct(HomePageBB.java:120)
+at testCaseBestBuy.TC_09_CheckOutPageFilling.tc_09_CheckOutPageFilling(TC_09_CheckOutPageFilling.java:31)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -507,44 +464,98 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#gh\-search\-input"}
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0fb6effc7f25e09f1151e8965a787a5c, findElement {using=id, value=gh-search-input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59839}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59839/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0fb6effc7f25e09f1151e8965a787a5c
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+... 30 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc_09_CheckOutPageFilling -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@2df9b86]" started-at="2025-08-29T09:36:10 IST" name="tearDown" finished-at="2025-08-29T09:36:10 IST" duration-ms="116" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@fba92d3]" started-at="2025-08-29T11:35:15 IST" name="tearDown" finished-at="2025-08-29T11:35:15 IST" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDownSuite()[pri:0, instance:testCaseBestBuy.TC_09_CheckOutPageFilling@2df9b86]" started-at="2025-08-29T09:37:51 IST" name="tearDownSuite" finished-at="2025-08-29T09:37:51 IST" duration-ms="89" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSuite -->
       </class> <!-- testCaseBestBuy.TC_09_CheckOutPageFilling -->
       <class name="testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage@101952da]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage@101952da]" started-at="2025-08-29T09:36:10 IST" name="setUp" finished-at="2025-08-29T09:36:15 IST" duration-ms="5003" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage@57d7f8ca]" started-at="2025-08-29T11:30:53 IST" name="setUp" finished-at="2025-08-29T11:30:58 IST" duration-ms="4188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="tc_05_validateLinkInBottomOfHomePage()[pri:6, instance:testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage@101952da]" started-at="2025-08-29T09:36:15 IST" name="tc_05_validateLinkInBottomOfHomePage" finished-at="2025-08-29T09:36:29 IST" duration-ms="14123" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage@57d7f8ca]" started-at="2025-08-29T11:30:58 IST" name="setup" finished-at="2025-08-29T11:30:58 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_05_validateLinkInBottomOfHomePage()[pri:6, instance:testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage@57d7f8ca]" started-at="2025-08-29T11:30:58 IST" name="tc_05_validateLinkInBottomOfHomePage" finished-at="2025-08-29T11:31:39 IST" duration-ms="41227" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Input must be set]]>
+              <![CDATA[timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a003535ed3e46a57ea9892688e0d339f, clickElement {id=f.461CAA19C20BBD2FE3476EAEDC3661E1.d.DF48F4092E9C613CCE0A9073EC23DB7F.e.16}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59559/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (a003535ed3e46a57ea9892688e0d339f)] -> class name: us-link]
+Session ID: a003535ed3e46a57ea9892688e0d339f]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Input must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:93)
-at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:74)
-at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:43)
-at utilsBestBuy.UtilsBB.waitExplicit(UtilsBB.java:82)
-at utilsBestBuy.UtilsBB.jsScrollUntillElement(UtilsBB.java:158)
-at pagesBestBuy.HomePageBB.validateTermsAndCondtionLink(HomePageBB.java:155)
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a003535ed3e46a57ea9892688e0d339f, clickElement {id=f.461CAA19C20BBD2FE3476EAEDC3661E1.d.DF48F4092E9C613CCE0A9073EC23DB7F.e.16}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: /var/folders/pq/7sg3jjwj15z...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:59559/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (a003535ed3e46a57ea9892688e0d339f)] -> class name: us-link]
+Session ID: a003535ed3e46a57ea9892688e0d339f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
+at baseBestBuy.BaseClassBB.clickOn(BaseClassBB.java:225)
+at pagesBestBuy.LocationPageBB.deliveryAtUSA(LocationPageBB.java:23)
 at testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage.tc_05_validateLinkInBottomOfHomePage(TC_05_ValidateLinkInBottomOfHomePage.java:25)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -574,27 +585,23 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc_05_validateLinkInBottomOfHomePage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage@101952da]" started-at="2025-08-29T09:36:29 IST" name="tearDown" finished-at="2025-08-29T09:36:29 IST" duration-ms="110" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage@57d7f8ca]" started-at="2025-08-29T11:31:39 IST" name="tearDown" finished-at="2025-08-29T11:31:39 IST" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCaseBestBuy.TC_05_ValidateLinkInBottomOfHomePage -->
       <class name="testCaseBestBuy.TC_04_CheckTitleOfAllMenu">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testCaseBestBuy.TC_04_CheckTitleOfAllMenu@4d02f94e]" started-at="2025-08-29T09:36:00 IST" name="setup" finished-at="2025-08-29T09:36:00 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="tc_04_CheckTitleOfAllMenu(java.lang.String,java.lang.String)[pri:5, instance:testCaseBestBuy.TC_04_CheckTitleOfAllMenu@4d02f94e]" started-at="2025-08-29T09:37:51 IST" name="tc_04_CheckTitleOfAllMenu" data-provider="getFromExcel" finished-at="2025-08-29T09:37:51 IST" duration-ms="0" status="FAIL">
+        <test-method signature="tc_04_CheckTitleOfAllMenu(java.lang.String,java.lang.String)[pri:5, instance:testCaseBestBuy.TC_04_CheckTitleOfAllMenu@6d4e5011]" started-at="2025-08-29T11:30:53 IST" name="tc_04_CheckTitleOfAllMenu" data-provider="getFromExcel" finished-at="2025-08-29T11:30:53 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[java.lang.NoSuchMethodError: 'org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream$Builder org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream.builder()']]>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "name" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NoSuchMethodError: 'org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream$Builder org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream.builder()'
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "name" is null
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
 at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
@@ -621,18 +628,10 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.NoSuchMethodError: 'org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream$Builder org.apache.commons.io.output.UnsynchronizedByteArrayOutputStream.builder()'
-at org.apache.poi.util.IOUtils.peekFirstNBytes(IOUtils.java:144)
-at org.apache.poi.poifs.filesystem.FileMagic.valueOf(FileMagic.java:209)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.verifyZipHeader(ZipHelper.java:144)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:188)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:156)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:351)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:64)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:313)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:287)
-at utilsBestBuy.UtilsBB.dataReader(UtilsBB.java:131)
-at baseBestBuy.BaseClassBB.getFromExcel(BaseClassBB.java:222)
+Caused by: java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "name" is null
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(XSSFWorkbook.java:1199)
+at utilsBestBuy.UtilsBB.dataReader(UtilsBB.java:147)
+at baseBestBuy.BaseClassBB.getFromExcel(BaseClassBB.java:292)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)

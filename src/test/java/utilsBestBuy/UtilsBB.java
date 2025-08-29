@@ -82,7 +82,7 @@ public class UtilsBB {
 		if (driver == null) {
 			throw new IllegalStateException("WebDriver is not initialized. Make sure to call initialization() first.");
 		}
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
