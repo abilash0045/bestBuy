@@ -1,7 +1,7 @@
 package testCaseBestBuy;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 
 import baseBestBuy.BaseClassBB;
 import pagesBestBuy.CartPageBB;
@@ -13,12 +13,14 @@ import pagesBestBuy.ProductPageBB;
 public class TC_09_CheckOutPageFilling extends BaseClassBB {
 	//https://www.bestbuy.com/checkout/r/payment
 	
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
 		testName = "tc_09_CheckOutPageFilling";
 		testDescription = "Navigating to the checkout page and filling the form with dummy payment information";
 		testCategory = "Regression";
 		testAuthor = "Basil Ahamed";
+		// Call parent setUp method to initialize WebDriver
+		super.setUp();
 	}
 	
 	@Test(priority=10)

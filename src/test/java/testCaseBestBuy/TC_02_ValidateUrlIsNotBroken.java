@@ -2,19 +2,21 @@ package testCaseBestBuy;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 
 import baseBestBuy.BaseClassBB;
 import pagesBestBuy.LocationPageBB;
 
 public class TC_02_ValidateUrlIsNotBroken extends BaseClassBB {
 	
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
 		testName = "tc_02_validateUrlIsNotBroken";
 		testDescription = "Given URL Link is broken or not";
 		testCategory = "Regression";
 		testAuthor = "Basil Ahamed";
+		// Call parent setUp method to initialize WebDriver
+		super.setUp();
 	}
 	
 

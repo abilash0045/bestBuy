@@ -1,7 +1,7 @@
 package testCaseBestBuy;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 
 import baseBestBuy.BaseClassBB;
 import pagesBestBuy.HomePageBB;
@@ -9,12 +9,14 @@ import pagesBestBuy.LocationPageBB;
 
 public class TC_05_ValidateLinkInBottomOfHomePage extends BaseClassBB {
 	
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
 		testName = "tc_05_validateLinkInBottomOfHomePage";
 		testDescription = "Link in HomePage bottom is broken or not";
 		testCategory = "Regression";
 		testAuthor = "Basil Ahamed";
+		// Call parent setUp method to initialize WebDriver
+		super.setUp();
 	}
 	
 	@Test(priority=6)

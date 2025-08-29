@@ -1,7 +1,7 @@
 package testCaseBestBuy;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 
 import baseBestBuy.BaseClassBB;
 import pagesBestBuy.CartPageBB;
@@ -11,13 +11,15 @@ import pagesBestBuy.ProductPageBB;
 
 public class TC_08_SelAddItemShopByBrandMenu extends BaseClassBB {
 
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
 
 		testName = "tc_08_selAddItemShopByBrandMenu";
 		testDescription = "Search a Item by Brands in Menu and add it in cart";
 		testCategory = "Regression";
 		testAuthor = "Basil Ahamed";
+		// Call parent setUp method to initialize WebDriver
+		super.setUp();
 	}
 
 	@Test(priority=9)

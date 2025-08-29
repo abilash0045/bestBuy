@@ -1,19 +1,21 @@
 package testCaseBestBuy;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 
 import baseBestBuy.BaseClassBB;
 import pagesBestBuy.LocationPageBB;
 
 public class TC_01_navgatingToBestBestApp extends BaseClassBB {
 	
-	@BeforeTest
+	@BeforeMethod
 	public void setup() {
 		testName = "tc_01_navgatingToBestBestApp";
 		testDescription = "Navigating to the Best Buy e-commerce website";
 		testCategory = "Regression";
 		testAuthor = "Basil Ahamed";
+		// Call parent setUp method to initialize WebDriver
+		super.setUp();
 	}
 	
 	@Test(priority=1)

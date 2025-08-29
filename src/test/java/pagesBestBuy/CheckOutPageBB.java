@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import baseBestBuy.BaseClassBB;
+import utilsBestBuy.UtilsBB;
 
 public class CheckOutPageBB extends BaseClassBB {
 	
@@ -59,10 +60,10 @@ public class CheckOutPageBB extends BaseClassBB {
 	@FindBy(id="address-input")
 	WebElement address;
 	
-	@FindBy(id="//button[text()='Edit this address']")
+	@FindBy(xpath="//button[text()='Edit this address']")
 	WebElement editThisAddress;
 	
-	@FindBy(id="//button[text()='Add a new address']")
+	@FindBy(xpath="//button[text()='Add a new address']")
 	WebElement addNewAddress;
 	
 	@FindBy(id="city")
@@ -92,7 +93,7 @@ public class CheckOutPageBB extends BaseClassBB {
 	//Please enter a valid card number.
 	
 	public CheckOutPageBB() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(UtilsBB.driver, this);
 	}
 	
 	public void contactInfoAtCheckOut(String emailAtCheckOut,String mobileNumAtCheckOut) throws Exception {

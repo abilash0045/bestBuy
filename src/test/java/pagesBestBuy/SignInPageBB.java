@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import baseBestBuy.BaseClassBB;
+import utilsBestBuy.UtilsBB;
 
 public class SignInPageBB extends BaseClassBB{
 	
@@ -22,7 +23,7 @@ public class SignInPageBB extends BaseClassBB{
 	WebElement goToHomePage;
 	
 	public SignInPageBB(){
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(UtilsBB.driver, this);
 	}
 	
 	public String signInFunctionality(String email, String password,String textXpath) throws Exception {

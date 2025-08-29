@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import baseBestBuy.BaseClassBB;
+import utilsBestBuy.UtilsBB;
 
 public class HomePageBB extends BaseClassBB {
 
@@ -82,7 +83,7 @@ public class HomePageBB extends BaseClassBB {
 	WebElement termsAndCondLink;
 
 	public HomePageBB() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(UtilsBB.driver, this);
 	}
 
 	public void goToCreatAccount() {
@@ -122,6 +123,12 @@ public class HomePageBB extends BaseClassBB {
 
 	public void selectTvMenuInHomePage() {
 		clickOn(menuButton);
+		// Add a small wait to ensure menu loads
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		clickOn(tvInMenu);
 		clickOn(tvsByBrandInnerMenu);
 		clickOn(sonyTvsInnerMenu2);
@@ -133,6 +140,12 @@ public class HomePageBB extends BaseClassBB {
 
 	public void selectLenovoBrand() {
 		clickOn(menuButton);
+		// Add a small wait to ensure menu loads
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		clickOn(brandsInMenu);
 		clickOn(lenovoInBrandsMenu);
 	}

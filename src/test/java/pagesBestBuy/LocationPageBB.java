@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import baseBestBuy.BaseClassBB;
+import utilsBestBuy.UtilsBB;
 
 public class LocationPageBB extends BaseClassBB {
 	
@@ -15,7 +16,7 @@ public class LocationPageBB extends BaseClassBB {
 	WebElement countryCanada;
 	
 	public LocationPageBB() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(UtilsBB.driver, this);
 	}
 	
 	public void deliveryAtUSA() {

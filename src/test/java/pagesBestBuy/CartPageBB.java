@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import baseBestBuy.BaseClassBB;
+import utilsBestBuy.UtilsBB;
 
 public class CartPageBB extends BaseClassBB {
 	
@@ -21,7 +22,7 @@ public class CartPageBB extends BaseClassBB {
 	WebElement checkOutInCart;
 	
 	public CartPageBB() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(UtilsBB.driver, this);
 	}
 	
 	public String validateLogitechMouseInCart() {

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import baseBestBuy.BaseClassBB;
+import utilsBestBuy.UtilsBB;
 
 public class CreatAccountPageBB extends BaseClassBB {
 	
@@ -33,11 +34,11 @@ public class CreatAccountPageBB extends BaseClassBB {
 	@FindBy(xpath="//button[text()='Create an Account']")
 	WebElement creatAnAccount;
 	
-	@FindBy(id="//*[text()='Sign Up with Google']")
+	@FindBy(xpath="//*[text()='Sign Up with Google']")
 	WebElement googleSignUp;
 	
 	public CreatAccountPageBB() {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(UtilsBB.driver, this);
 	}
 	
 	public String creatAccountFunctionality(String fName, String lName, String email,

@@ -57,7 +57,7 @@ public class UtilsBB {
 
 	public static void launchBrowser(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().clearDriverCache().setup();
 			ChromeOptions options = new ChromeOptions();
 //			options.addArguments("--headless");
 			driver = new ChromeDriver(options);
@@ -79,20 +79,32 @@ public class UtilsBB {
 	}
 
 	public static void waitExplicit(WebElement element) {
+		if (driver == null) {
+			throw new IllegalStateException("WebDriver is not initialized. Make sure to call initialization() first.");
+		}
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	public static void waitExplicitUntillTitle(String titleToWait) {
+		if (driver == null) {
+			throw new IllegalStateException("WebDriver is not initialized. Make sure to call initialization() first.");
+		}
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.titleIs(titleToWait));
 	}
 
 	public static void waitImplicit() {
+		if (driver == null) {
+			throw new IllegalStateException("WebDriver is not initialized. Make sure to call initialization() first.");
+		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(25));
 	}
 
 	public static void getApplication(String url) {
+		if (driver == null) {
+			throw new IllegalStateException("WebDriver is not initialized. Make sure to call initialization() first.");
+		}
 		driver.get(url);
 	}
 
@@ -102,17 +114,20 @@ public class UtilsBB {
 		element.sendKeys(text);
 	}
 
-	public static void clickOn(WebElement element) {
+	public void clickOn(WebElement element) {
 		waitExplicit(element);
 		element.click();
 	}
 
 	public static String getPageTitle() {
-		waitExplicitUntillTitle(driver.getTitle());
+		if (driver == null) {
+			throw new IllegalStateException("WebDriver is not initialized. Make sure to call initialization() first.");
+		}
+		// Just return the current page title without waiting
 		return driver.getTitle();
 	}
 
-	public static String extractText(WebElement element) {
+	public String extractText(WebElement element) {
 		return element.getText();
 	}
 
@@ -155,16 +170,25 @@ public class UtilsBB {
 	}
 
 	public static void jsScrollUntillElement(WebElement element) {
+		if (driver == null) {
+			throw new IllegalStateException("WebDriver is not initialized. Make sure to call initialization() first.");
+		}
 		waitExplicit(element);
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
 	public static void jsClickOn(WebElement element) {
+		if (driver == null) {
+			throw new IllegalStateException("WebDriver is not initialized. Make sure to call initialization() first.");
+		}
 		waitExplicit(element);
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 	}
 
 	public static int screenShot(String testName) throws Exception {
+		if (driver == null) {
+			throw new IllegalStateException("WebDriver is not initialized. Make sure to call initialization() first.");
+		}
 		int ranNum = (int) (Math.random() * 9999999 + 1000000);
 		Thread.sleep(3000);
 		String projectPath = System.getProperty("user.dir");
@@ -173,10 +197,7 @@ public class UtilsBB {
 		return ranNum;
 	}
 
-	public static void softAssert(String actResult, String expResult) {
-		SoftAssert sa = new SoftAssert();
-		sa.assertEquals(actResult, expResult);
-	}
+	// softAssert method moved to BaseClassBB to avoid creating new instances
 
 	public void reportStep(String stepDetails, String stepStatus, String testName) throws Exception {
 		int ranNum = screenShot(testName);
