@@ -7,7 +7,6 @@ import org.testng.annotations.BeforeClass;
 import baseBestBuy.BaseClassBB;
 import pagesBestBuy.CreatAccountPageBB;
 import pagesBestBuy.HomePageBB;
-import pagesBestBuy.LocationPageBB;
 
 public class TC_03_CreatAccountFunctionality extends BaseClassBB {
 	
@@ -29,8 +28,7 @@ public class TC_03_CreatAccountFunctionality extends BaseClassBB {
 	@Test(dataProvider="getFromExcel", priority=3)
 	public void tc_03_validateCreatAccountFunctionality(String fname, String lname, String emailId,
 			String pass, String repass, String mob, String xpathText, String expMsg) throws Exception {
-		LocationPageBB lp=new LocationPageBB();
-		lp.deliveryAtUSA();
+		// Country selection is already handled in BaseClassBB.initialization()
 		HomePageBB hp=new HomePageBB();
 		hp.goToCreatAccount();
 		CreatAccountPageBB ca=new CreatAccountPageBB();

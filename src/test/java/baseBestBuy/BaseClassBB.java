@@ -142,13 +142,9 @@ public class BaseClassBB extends UtilsBB {
             options.addArguments("--disable-extensions");
             options.addArguments("--disable-notifications");
             
-            // Check if running in Jenkins or CI environment
-            String jenkinsUrl = System.getenv("JENKINS_URL");
-            String ci = System.getenv("CI");
-            if (jenkinsUrl != null || "true".equals(ci)) {
-                System.out.println("Running in CI environment - enabling headless mode");
-                options.addArguments("--headless");
-            }
+            // For resume projects, always use GUI mode for better demonstration
+            // Headless mode is only needed for production CI/CD environments
+            System.out.println("Running in GUI mode - perfect for resume demonstration");
             
             System.out.println("Creating ChromeDriver instance...");
             driver = new ChromeDriver(options);
@@ -205,6 +201,14 @@ public class BaseClassBB extends UtilsBB {
             
             // Handle country selection if needed
             handleCountrySelection();
+            
+            // Verify we're on the correct page after country selection
+            String finalTitle = driver.getTitle();
+            if (finalTitle.contains("Select your Country") || finalTitle.contains("International")) {
+                System.out.println("Still on country selection page, trying direct navigation...");
+                driver.get("https://www.bestbuy.com/?intl=nosplash");
+                Thread.sleep(3000);
+            }
             
             System.out.println("WebDriver initialization completed successfully");
             
@@ -322,52 +326,29 @@ public class BaseClassBB extends UtilsBB {
             if (currentTitle.contains("Select your Country") || currentTitle.contains("International")) {
                 System.out.println("Country selection page detected, selecting United States...");
                 
-                // Try multiple approaches to find and click the United States link
-                boolean countrySelected = false;
-                
-                // Approach 1: Find by link text
+                // In GUI mode, we can use the reliable link text approach
                 try {
                     List<WebElement> usLinks = driver.findElements(By.linkText("United States"));
                     if (!usLinks.isEmpty()) {
                         usLinks.get(0).click();
-                        countrySelected = true;
-                        System.out.println("United States selected via link text");
+                        Thread.sleep(3000); // Wait for navigation
+                        System.out.println("United States selected successfully");
+                    } else {
+                        System.out.println("United States link not found, trying direct URL...");
+                        driver.get("https://www.bestbuy.com/?intl=nosplash");
+                        Thread.sleep(3000);
+                        System.out.println("Country selection completed via direct URL");
                     }
                 } catch (Exception e) {
-                    System.out.println("Link text approach failed: " + e.getMessage());
-                }
-                
-                // Approach 2: Find by class name
-                if (!countrySelected) {
+                    System.out.println("Country selection failed: " + e.getMessage());
+                    // Fallback to direct URL
                     try {
-                        List<WebElement> usClassLinks = driver.findElements(By.className("us-link"));
-                        if (!usClassLinks.isEmpty()) {
-                            usClassLinks.get(0).click();
-                            countrySelected = true;
-                            System.out.println("United States selected via class name");
-                        }
-                    } catch (Exception e) {
-                        System.out.println("Class name approach failed: " + e.getMessage());
+                        driver.get("https://www.bestbuy.com/?intl=nosplash");
+                        Thread.sleep(3000);
+                        System.out.println("Country selection completed via direct URL fallback");
+                    } catch (Exception urlEx) {
+                        System.out.println("All country selection methods failed, continuing anyway");
                     }
-                }
-                
-                // Approach 3: JavaScript click
-                if (!countrySelected) {
-                    try {
-                        WebElement usLink = driver.findElement(By.linkText("United States"));
-                        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", usLink);
-                        countrySelected = true;
-                        System.out.println("United States selected via JavaScript");
-                    } catch (Exception e) {
-                        System.out.println("JavaScript approach failed: " + e.getMessage());
-                    }
-                }
-                
-                if (countrySelected) {
-                    Thread.sleep(3000); // Wait for navigation
-                    System.out.println("Country selection completed");
-                } else {
-                    System.out.println("Could not select country, continuing anyway");
                 }
             } else {
                 System.out.println("No country selection needed");
